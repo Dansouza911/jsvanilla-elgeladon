@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Exo, sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: #ffffff;
+}
+
+.Home {
+  position: relative;
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #50c5ee 60%,
+    #00d4ff80
+  );
+  min-height: calc(100vh - 60px);
+  margin: 15px;
+  padding: 15px;
+  border-radius: 20px;
+  color: black;
+  box-shadow: 0px 0px 15px #0000004d;
+}
+
+.Home > h2 {
+  display: flex;
+  justify-content: space-around;
+  color: black;
+}
+
+.Home > div {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.HomeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 350px) {
+  .HomeContainer {
+    justify-content: unset;
+  }
+}
+
+.paletaLista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px 50px;
+}
+
+@media (max-width: 1220px) {
+  .paletaLista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 840px) {
+  .paletaLista {
+    grid-template-columns: 1fr;
+  }
+}
+
+.CardPaleta {
+  font-family: "Exo";
+  background: #ffffff4d;
+  border-radius: 10px;
+  padding: 10px;
+  width: 315px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  height: 150px;
+}
+
+@media (max-width: 400px) {
+  .CardPaleta,
+  .CardPaleta__infos {
+    width: 210px;
+    height: 180px;
+  }
+}
+
+.CardPaleta > div,
+.CardPaleta__infos > div {
+display: flex;
+justify-content:space-between;
+flex-direction: column;
+}
+
+.CardPaleta > h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.CardPaleta__infos > p {
+    font-size: 0.85rem;
+}
+
+.CardPaleta__infos > span {
+    color: #9400d3
+}
+
+.CardPaleta > img {
+    height: 150px;
+    margin-right: -60px;
+}
+
+.Header {
+    width: calc(60vw - 60px);
+    height: 12vh;
+    align-items: center;
+    padding: 0 20vw;
+}
+
+.Header > .Header__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header > .Header__container > div {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #ffffff4d;
+    width: 16vw;
+    height: 7vh;
+    border-radius:10px;
+    position: relative;
+}
+
+.Header > .Header__container > div > img {
+    position: absolute;
+    left: -25px;
+    top: -10px;
+}
+
+.Header > .Header__container > div > h2 {
+    position: absolute;
+    left: 50px;
+}
+
+.MensagemDeErro {
+    color: red;
+    margin: 2rem;
+    font-size: larger;
+}
+
+.PesquisarPaleta {
+    width: calc(20vw - 60px);
+    padding: 0 40vw;
+   
+  }
+  
+  .PesquisarPaleta > #PesquisarPaleta__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+  } 
+  
+  .PesquisarPaleta > #PesquisarPaleta__container > input {
+    border: none;
+    margin: 1rem 0;
+    padding: 8px 6px;
+    border-radius: 3px;
+  }
+  
+  .PesquisarPaleta > #PesquisarPaleta__container > button {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 2px solid #9400d3;
+    color: #9400d3;
+    font-size: larger;
+    font-weight: 700;
+    height: 33px;
+  }
+  .PaletaPesquisada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .PesquisarPaleta-Espaço {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+  }
