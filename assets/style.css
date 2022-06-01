@@ -35,7 +35,13 @@ html {
   color: black;
 }
 
-.Home > div {
+.Home > .PesquisarPaleta {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.Home > .HomeContainer {
   display: flex;
   justify-content: center;
   color: black;
@@ -90,112 +96,274 @@ html {
   }
 }
 
-.CardPaleta > div,
-.CardPaleta__infos > div {
-display: flex;
-justify-content:space-between;
-flex-direction: column;
+.CardPaleta > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .CardPaleta > h4 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 100%;
 }
 
 .CardPaleta__infos > p {
-    font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 
 .CardPaleta__infos > span {
-    color: #9400d3
+  color: #9400d3;
 }
 
+.CardPaleta__infos > div > button {
+  background-color: transparent;
+  padding: 0.6rem 2.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botao-excluir-paleta {
+  border: 1px solid red;
+  color: red;
+}
+
+.botao-excluir-paleta:hover {
+  background-color: red;
+  color: #ffffff;
+}
+
+.botao-editar-paleta {
+  border: 1px solid blue;
+  color: blue;
+}
+
+.botao-editar-paleta:hover {
+  background-color: blue;
+  color: #ffffff;
+}
 .CardPaleta > img {
-    height: 150px;
-    margin-right: -60px;
+  height: 150px;
+  margin-right: -60px;
 }
 
 .Header {
-    width: calc(60vw - 60px);
-    height: 12vh;
-    align-items: center;
-    padding: 0 20vw;
+  width: calc(60vw - 60px);
+  height: 12vh;
+  align-items: center;
+  padding: 0 20vw;
 }
 
 .Header > .Header__container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .Header > .Header__container > div {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    background-color: #ffffff4d;
-    width: 16vw;
-    height: 7vh;
-    border-radius:10px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #ffffff4d;
+  width: 16vw;
+  height: 7vh;
+  border-radius: 10px;
+  position: relative;
 }
 
 .Header > .Header__container > div > img {
-    position: absolute;
-    left: -25px;
-    top: -10px;
+  position: absolute;
+  left: -25px;
+  top: -10px;
 }
 
 .Header > .Header__container > div > h2 {
-    position: absolute;
-    left: 50px;
+  position: absolute;
+  left: 50px;
 }
 
 .MensagemDeErro {
-    color: red;
-    margin: 2rem;
-    font-size: larger;
+  color: red;
+  margin: 2rem;
+  font-size: larger;
 }
 
 .PesquisarPaleta {
-    width: calc(20vw - 60px);
-    padding: 0 40vw;
-   
-  }
-  
-  .PesquisarPaleta > #PesquisarPaleta__container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    
-  } 
-  
-  .PesquisarPaleta > #PesquisarPaleta__container > input {
-    border: none;
-    margin: 1rem 0;
-    padding: 8px 6px;
-    border-radius: 3px;
-  }
-  
-  .PesquisarPaleta > #PesquisarPaleta__container > button {
-    background-color: transparent;
-    border-radius: 3px;
-    border: 2px solid #9400d3;
-    color: #9400d3;
-    font-size: larger;
-    font-weight: 700;
-    height: 33px;
-  }
-  .PaletaPesquisada {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-  }
+  width: calc(20vw - 60px);
+  padding: 0 40vw;
+}
 
-  .PesquisarPaleta-Espaço {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
+.PesquisarPaleta > #PesquisarPaleta__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.PesquisarPaleta > #PesquisarPaleta__container > input {
+  border: none;
+  margin: 1rem 0;
+  padding: 8px 6px;
+  border-radius: 3px;
+}
+.botao-cadastro {
+  padding: 0.1rem 5rem;
+  font-size: medium;
+}
+
+.botao-padrao {
+  background-color: transparent;
+  border-radius: 3px;
+  border: 2px solid #9400d3;
+  color: #9400d3;
+  font-size: larger;
+  font-weight: 700;
+  height: 33px;
+  cursor: pointer;
+}
+
+.botao-padrao:hover {
+  color: #50c5ee;
+  background-color: #9400d3;
+}
+
+.NovaPaleta__container {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.PaletaPesquisada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.PesquisarPaleta-Espaço {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.fundo-modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0000004d;
+  align-items: center;
+  justify-content: center;
+}
+
+.fundo-modal > .modal {
+  width: 30vw;
+  height: 36vh;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.fundo-modal > .modal > .cabecalho-modal {
+  width: calc(100% - 40px);
+  height: 7vh;
+  background-color: #50c5ee;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  user-select: none;
+}
+
+.fundo-modal > .modal > .cabecalho-modal > span {
+  cursor: pointer;
+}
+
+.fundo-modal > .modal > .corpo-modal {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 14px);
+  padding: 0 7px;
+  align-items: center;
+}
+
+.fundo-modal > .modal > .corpo-modal > input,
+textarea {
+  width: calc(100% - 14px);
+  border: 1px solid #0000002d;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 7px;
+}
+
+.fundo-modal > .modal > .corpo-modal > button {
+  width: 9vw;
+  height: 4vh;
+  margin-top: 7px;
+  border: 1px solid #50c5ee;
+  color: #50c5ee;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fundo-modal > .modal > .corpo-modal > button:hover {
+  color: white;
+  background-color: #50c5ee;
+}
+
+.corpo-modal-exclusao {
+  margin-top: 2rem;
+}
+
+.corpo-modal-exclusao > h2 {
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.corpo-modal-exclusao > div {
+  width: calc(100% - 14px);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.corpo-modal-exclusao > div > button {
+  background-color: transparent;
+  padding: 0.6rem 5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: large;
+}
+
+.botao-cancelar-excluir-paleta {
+  border: 1px solid red;
+  color: red;
+}
+
+.botao-cancelar-excluir-paleta:hover {
+  background-color: red;
+  color: white;
+}
+
+.botao-confirmar-excluir-paleta {
+  border: 1px solid #00b309;
+  color: #00b309;
+}
+
+.botao-confirmar-excluir-paleta:hover {
+  background-color: #00b309;
+  color: white;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
